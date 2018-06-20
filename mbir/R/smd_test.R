@@ -20,7 +20,7 @@
 #'@export
 
 smd_test<-function(x, y, paired = c(TRUE, FALSE), auto=TRUE, var = TRUE, normal = TRUE, conf.int = 0.9, mu = 0, swc = 0.5, plot=FALSE) {
-
+#Modified June 20th
   if (is.character(x) == TRUE ||
       is.factor(x) == TRUE || is.character(y) ==
       TRUE || is.factor(y) == TRUE) {
