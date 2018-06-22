@@ -1,9 +1,9 @@
 ---
 name:  dataMBItwo
-title: MBI for Independent Samples 
+title: MBI for Independent Samples
 menuGroup: mbir
 version: '1.0.0'
-jas: '1.1'
+jas: '1.2'
 
 description:
   R:
@@ -17,36 +17,36 @@ description:
             group = "Gender")
 
         #
-        #  Independent Samples T-Test      
-        #  ─────────────────────────────── 
-        #            t       df    p       
-        #  ─────────────────────────────── 
-        #    LDLF    1.47    60    0.147   
-        #  ─────────────────────────────── 
+        #  Independent Samples T-Test
+        #  ───────────────────────────────
+        #            t       df    p
+        #  ───────────────────────────────
+        #    LDLF    1.47    60    0.147
+        #  ───────────────────────────────
         #    Note. Welch's, unequal
         #    variances, t-test
-        # 
-        # 
+        #
+        #
 
         #
-        #  Effect Size                                                                                    
-        #  ────────────────────────────────────────────────────────────────────────────────────────────── 
-        #            Mean Difference    Lower     Upper                 Effect Size    Lower      Upper   
-        #  ────────────────────────────────────────────────────────────────────────────────────────────── 
-        #    LDLF              0.857    -0.309     2.02    Cohen's d          0.330    -0.0450    0.705   
-        #  ────────────────────────────────────────────────────────────────────────────────────────────── 
-        # 
-        # 
+        #  Effect Size
+        #  ──────────────────────────────────────────────────────────────────────────────────────────────
+        #            Mean Difference    Lower     Upper                 Effect Size    Lower      Upper
+        #  ──────────────────────────────────────────────────────────────────────────────────────────────
+        #    LDLF              0.857    -0.309     2.02    Cohen's d          0.330    -0.0450    0.705
+        #  ──────────────────────────────────────────────────────────────────────────────────────────────
+        #
+        #
 
-        #       
-        #  Magnitude Based Inference                                               
-        #  ─────────────────────────────────────────────────────────────────────── 
-        #            Negative    Trivial    Positive    Inference                  
-        #  ─────────────────────────────────────────────────────────────────────── 
-        #    LDLF        0.00       77.4        22.6    Likely Trivial Increase.   
-        #  ─────────────────────────────────────────────────────────────────────── 
-        # 
-        # 
+        #
+        #  Magnitude Based Inference
+        #  ───────────────────────────────────────────────────────────────────────
+        #            Negative    Trivial    Positive    Inference
+        #  ───────────────────────────────────────────────────────────────────────
+        #    LDLF        0.00       77.4        22.6    Likely Trivial Increase.
+        #  ───────────────────────────────────────────────────────────────────────
+        #
+        #
 
 
 
@@ -57,19 +57,15 @@ options:
     type: Data
     description:
         R: the data as a data frame
-          
-  - name: deps                  
-    title: Dependent Variables  
-    type: Variables 
+
+  - name: deps
+    title: Dependent Variables
+    type: Variables
     suggested:
       - continuous
-    permitted:
-      - continuous
-      - nominal
-      - ordinal
     rejectInf: false
     description:
-        R: a vector of strings naming the dependent variables    
+        R: a vector of strings naming the dependent variables
 
   - name: group
     title: Grouping Variable
@@ -105,13 +101,13 @@ options:
     description:
         R: >
           90% (default) confidence intervals for effect sizes
-    
+
   - name: desc
     title: Descriptive statistics
     type: Bool
     default: false
     description:
         R: >
-          `TRUE` or `FALSE` (default), provide descriptive statistics    
-    
+          `TRUE` or `FALSE` (default), provide descriptive statistics
+
 ...

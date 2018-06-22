@@ -3,12 +3,12 @@ name:  dataMBIcorr
 title: MBI for Correlation
 menuGroup: mbir
 version: '1.0.0'
-jas: '1.1'
+jas: '1.2'
 
 description:
   R:
       usage: |
-      
+
           data('bugs', package = 'jmv')
 
           mbir::dataMBIcorr(
@@ -17,16 +17,16 @@ description:
                   list(
                       i1="LDLF",
                       i2="LDHF")))
-          
+
           #
-          #  Magnitude Based Inference: Correlation                                                                                                            
-          #  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
-          #                                            p         Negative (%)    Trivial (%)    Positive (%)    Inference                                      
-          #  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
-          #    LDLF    LDHF    Pearson's r    0.577    < .001            0.00           0.00             100    Almost Certainly Large Positive Correlation.   
-          #  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
-          # 
-          # 
+          #  Magnitude Based Inference: Correlation
+          #  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+          #                                            p         Negative (%)    Trivial (%)    Positive (%)    Inference
+          #  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+          #    LDLF    LDHF    Pearson's r    0.577    < .001            0.00           0.00             100    Almost Certainly Large Positive Correlation.
+          #  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+          #
+          #
 
 
 options:
@@ -39,10 +39,9 @@ options:
       title: Paired Variables
       type: Pairs
       suggested: [continuous]
-      permitted: [continuous, nominal, ordinal]
       description:
           R: a list of vectors of strings naming variables to pair from `data`
-          
+
 
     - name: pearson
       title: Pearson
@@ -67,7 +66,7 @@ options:
       description:
           R: >
             `TRUE` or `FALSE` (default), provide Kendall's tau-b
-    
+
     - name: SWC
       title: Smallest Worthwhile Change (correlation coefficient)
       type: Number
@@ -87,7 +86,7 @@ options:
       description:
           R: >
             90% (default), confidence interval for magnitude-based inference
-            
+
     - name: desc
       title: Descriptive statistics
       type: Bool

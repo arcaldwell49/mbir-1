@@ -6,14 +6,14 @@ menuSubgroup: Non-Parametric
 menuTitle: MBI for Paired Samples
 menuSubtitle: Wilcoxon signed-rank test
 version: '1.0.0'
-jas: '1.1'
+jas: '1.2'
 
 description:
   R:
       usage: |
-        
+
         data('bugs', package = 'jmv')
-        
+
         mbir::dataMBInppair(
           data = bugs,
           pairs = list(
@@ -21,34 +21,34 @@ description:
               i1="LDHF",
               i2="LDLF")))
 
-        #  Wilcoxon signed-rank test               
-        #  ─────────────────────────────────────── 
-        #                    statistic    p        
-        #  ─────────────────────────────────────── 
-        #    LDHF    LDLF         2250    < .001   
-        #  ─────────────────────────────────────── 
-        # 
-        # 
+        #  Wilcoxon signed-rank test
+        #  ───────────────────────────────────────
+        #                    statistic    p
+        #  ───────────────────────────────────────
+        #    LDHF    LDLF         2250    < .001
+        #  ───────────────────────────────────────
+        #
+        #
 
         #
-        #  Effect Size                                       
-        #  ───────────────────────────────────────────────── 
-        #                    Effect Size    Lower    Upper   
-        #  ───────────────────────────────────────────────── 
-        #    LDHF    LDLF          0.585    0.458    0.689   
-        #  ───────────────────────────────────────────────── 
-        # 
-        # 
+        #  Effect Size
+        #  ─────────────────────────────────────────────────
+        #                    Effect Size    Lower    Upper
+        #  ─────────────────────────────────────────────────
+        #    LDHF    LDLF          0.585    0.458    0.689
+        #  ─────────────────────────────────────────────────
+        #
+        #
 
         #
-        #  Magnitude Based Inference                                                                 
-        #  ───────────────────────────────────────────────────────────────────────────────────────── 
-        #                    Negative    Trivial    Positive    Inference                            
-        #  ───────────────────────────────────────────────────────────────────────────────────────── 
-        #    LDHF    LDLF        0.00       0.00         100    Almost Certainly Large Effect Size   
-        #  ───────────────────────────────────────────────────────────────────────────────────────── 
-        # 
-        # 
+        #  Magnitude Based Inference
+        #  ─────────────────────────────────────────────────────────────────────────────────────────
+        #                    Negative    Trivial    Positive    Inference
+        #  ─────────────────────────────────────────────────────────────────────────────────────────
+        #    LDHF    LDLF        0.00       0.00         100    Almost Certainly Large Effect Size
+        #  ─────────────────────────────────────────────────────────────────────────────────────────
+        #
+        #
 
 
 options:
@@ -61,12 +61,11 @@ options:
       title: Paired Variables
       type: Pairs
       suggested: [continuous]
-      permitted: [continuous, nominal, ordinal]
       description:
           R: a list of vectors of strings naming variables to pair from `data`
-      
+
     - name: SWC
-      title: Smallest Worthwhile Change 
+      title: Smallest Worthwhile Change
       type: Number
       min: 0
       default: 0.5
@@ -82,7 +81,7 @@ options:
       description:
           R: >
             90% (default), confidence interval for magnitude-based inference
-    
+
     - name: desc
       title: Descriptive statistics
       type: Bool

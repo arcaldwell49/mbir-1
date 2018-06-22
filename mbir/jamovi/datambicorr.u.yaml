@@ -7,9 +7,6 @@ children:
   - type: VariableSupplier
     suggested:
       - continuous
-    permitted:
-      - continuous
-      - ordinal
     persistentItems: true
     stretchFactor: 1
     children:
@@ -29,7 +26,7 @@ children:
                 stretchFactor: 1
                 template:
                   type: VariableLabel
-                  
+
 
   - type: LayoutBox
     margin: large
@@ -43,7 +40,7 @@ children:
         children:
           - type: Label
             label: Type of Correlation
-            children: 
+            children:
               - type: CheckBox
                 name: pearson
               - type: CheckBox
@@ -63,7 +60,7 @@ children:
         children:
           - type: Label
             label: Options
-            children: 
+            children:
               - type: TextBox
                 name: SWC
                 format: number

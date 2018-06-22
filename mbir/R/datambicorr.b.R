@@ -1,6 +1,6 @@
 
 # This file is a generated template, your changes will not be overwritten
-
+#' @import jmvcore
 dataMBIcorrClass <- if (requireNamespace('jmvcore')) R6::R6Class(
     "dataMBIcorrClass",
     inherit = dataMBIcorrBase,
